@@ -1,44 +1,82 @@
 body{
-background:#ffd6e7;
-font-family:sans-serif;
+margin:0;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+font-family:sans-serif;
+background:linear-gradient(135deg,#ffb6d5,#ffe0ec);
 text-align:center;
-margin:0;
 }
 
 .hidden{
 display:none;
 }
 
-#intro, #question{
-max-width:500px;
-padding:30px;
+/* intro */
+#intro{
 background:white;
+padding:30px;
 border-radius:25px;
-box-shadow:0 0 20px rgba(0,0,0,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-h1{ color:#ff4f9a; }
-h2{ color:#555; }
+h1{
+color:#ff4f9a;
+}
+
+.sub{
+color:#888;
+font-size:13px;
+}
+
+/* card */
+.card{
+background:white;
+padding:25px;
+width:320px;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.sub2{
+color:#666;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.box{
+text-align:left;
+margin:10px 0;
+}
+
+label{
+font-size:13px;
+color:#444;
+}
 
 input, textarea{
 width:100%;
-padding:12px;
-margin:10px 0;
+padding:10px;
+margin-top:5px;
 border-radius:10px;
 border:1px solid #ddd;
+outline:none;
 }
 
 button{
+width:100%;
+padding:12px;
+margin-top:15px;
+border:none;
+border-radius:12px;
 background:#ff4f9a;
 color:white;
-border:none;
-padding:15px;
-width:100%;
-border-radius:10px;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff2f86;
 }
