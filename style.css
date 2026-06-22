@@ -67,7 +67,99 @@ outline:none;
 button{
 width:100%;
 padding:12px;
+margibody{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:sans-serif;
+background:linear-gradient(135deg,#ffe0ec,#fff5f8);
+text-align:center;
+}
+
+.hidden{
+display:none;
+}
+
+/* intro */
+#intro{
+background:rgba(255,255,255,0.8);
+backdrop-filter: blur(10px);
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1{
+color:#ff4f9a;
+}
+
+.sub{
+color:#777;
+font-size:13px;
+}
+
+/* card */
+.card{
+background:rgba(255,255,255,0.85);
+backdrop-filter: blur(12px);
+padding:25px;
+width:320px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.sub2{
+color:#666;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.box{
+text-align:left;
+margin:12px 0;
+}
+
+label{
+font-size:13px;
+color:#444;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+border-radius:10px;
+border:1px solid #eee;
+outline:none;
+}
+
+button{
+width:100%;
+padding:12px;
 margin-top:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#ff4f9a,#ff7eb3);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+/* popup */
+.popup{
+position:fixed;
+background:white;
+padding:15px 20px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}n-top:15px;
 border:none;
 border-radius:12px;
 background:#ff4f9a;

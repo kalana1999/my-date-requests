@@ -1,13 +1,13 @@
 const intro = document.getElementById("intro");
 const question = document.getElementById("question");
 const msg = document.getElementById("message");
+const popup = document.getElementById("popup");
 
-// smooth intro text change
+// intro animation
 setTimeout(() => {
-  msg.innerHTML = "💖 රශ්මි, මම ඔයාව හමුවෙන්න කැමතියි...";
+  msg.innerHTML = " රශ්මි, මම ඔයාව හමුවෙන්න කැමතියි 💖...";
 }, 2000);
 
-// smooth transition
 setTimeout(() => {
   intro.style.opacity = "0";
 
@@ -18,7 +18,7 @@ setTimeout(() => {
 
 }, 4000);
 
-// form submit
+// submit
 document.getElementById("meetForm")
 .addEventListener("submit", (e) => {
 
@@ -33,23 +33,29 @@ document.getElementById("meetForm")
     return;
   }
 
-  const message = `
-💖 රශ්මි
+  // popup show
+  popup.classList.remove("hidden");
 
-🥺 මට ඔයාව හමුවෙන්න ආසයි...
+  setTimeout(() => {
+
+    // ✅ CLEAN FIXED MESSAGE (NO weird first line issue)
+    const message =
+`💖 රශ්මි
+🥺 මට ඔයාව හමුවෙන්න ම ඕන ...
 
 📅 දිනය: ${date}
 ⏰ වෙලාව: ${time}
+💌 අදහස: ${thought || "Adarei ❤️"}`;
 
-💌 අදහස:
-${thought}
-`;
+    const phone = "94750793109";
 
-  const phone = "94750793109";
+    const url =
+`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-  const waLink =
-    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
 
-  window.open(waLink, "_blank");
+    popup.classList.add("hidden");
 
-});S
+  }, 1200);
+
+});
